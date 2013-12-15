@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0-ea" class="java.beans.XMLDecoder">
- <object class="com.gpusim2.config.GridSimOutput">
-  <void property="totalSimulationTime">
-   <double>2.0000000896</double>
-  </void>
- </object>
-</java>
