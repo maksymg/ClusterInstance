@@ -12,8 +12,8 @@ import java.util.List;
  */
 public class ConfigurationUtil {
 
-    private static void deserializeConfigs(List<GridSimConfig> gridSimConfigList) throws FileNotFoundException {
-        int i = 0;
+    public static void deserializeConfigs(List<GridSimConfig> gridSimConfigList, int startIndex) throws FileNotFoundException {
+        int i = startIndex;
         for (GridSimConfig gridSimConfig : gridSimConfigList) {
             FileOutputStream out = new FileOutputStream("config" + i + ".xml");
             XMLEncoder xmlEncoder = new XMLEncoder(out);
