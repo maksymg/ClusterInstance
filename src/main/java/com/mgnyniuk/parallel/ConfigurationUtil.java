@@ -3,6 +3,7 @@ package com.mgnyniuk.parallel;
 import com.gpusim2.config.GridSimConfig;
 import com.gpusim2.config.GridSimOutput;
 import com.gpusim2.config.IncompatibleVersionException;
+import com.mgnyniuk.base.Main;
 
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
@@ -31,7 +32,7 @@ public class ConfigurationUtil {
         }
     }
 
-    public static List<GridSimOutput> loadConfigs(int startIndex, int partProcessesQuantity) throws FileNotFoundException, IncompatibleVersionException {
+    public static List<GridSimOutput> loadOutputs(int startIndex, int partProcessesQuantity) throws FileNotFoundException, IncompatibleVersionException {
 
         GridSimOutput gridSimOutput;
         List<GridSimOutput> gridSimOutputList = new ArrayList<GridSimOutput>();
@@ -42,9 +43,11 @@ public class ConfigurationUtil {
             gridSimOutput = (GridSimOutput) xmlDecoder.readObject();
             xmlDecoder.close();
 
+            Main.outputMap.put(i, gridSimOutput);
             gridSimOutputList.add(gridSimOutput);
         }
 
+        System.out.println("OutputMap size: " + Main.outputMap.size());
         return gridSimOutputList;
     }
 }
