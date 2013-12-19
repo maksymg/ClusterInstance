@@ -2,6 +2,8 @@ package com.mgnyniuk.base;
 
 import com.gpusim2.config.GridSimOutput;
 import com.hazelcast.config.Config;
+import com.hazelcast.config.MapConfig;
+import com.hazelcast.config.MaxSizeConfig;
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 
