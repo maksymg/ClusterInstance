@@ -51,11 +51,8 @@ public class Runner implements Callable<Boolean>, Serializable {
             }
 
             threadListener.quantityOfEndedThreads = 0;
-            //System.out.println("LLLLLLLL");
-
         }
         ConfigurationUtil.loadOutputs(startIndex,partProcessesQuantity);
-        //return ConfigurationUtil.loadConfigs(startIndex, partProcessesQuantity);
         return true;
     }
 }
